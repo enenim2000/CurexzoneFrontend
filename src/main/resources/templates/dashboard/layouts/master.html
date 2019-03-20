@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-<head th:replace="~{backend/fragments/head :: head}"></head>
+<head th:replace="~{dashboard/fragments/head :: head}"></head>
 
 <!-- begin::Body -->
 <body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
@@ -11,7 +11,7 @@
 <!-- begin:: Page -->
 <div class="m-grid m-grid--hor m-grid--root m-page">
 
-<header th:replace="~{backend/fragments/header :: header}"></header>
+<header th:replace="~{dashboard/fragments/header :: header}"></header>
 
 <!-- begin::Body -->
 <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
@@ -2645,7 +2645,7 @@
 
 
 <!-- Common js files -->
-<div th:replace="~{backend/fragments/footer :: footer}"></div>
+<div th:replace="~{dashboard/fragments/footer :: footer}"></div>
 
 <!-- Specific js files -->
 <div layout:fragment="footer"></div>

@@ -13,12 +13,12 @@
 		</title>
 
 		<!-- Stylesheets -->
-		<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="../assets/css/docs.theme.min.css">
+		<link th:href="@{/home/'https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" th:href="@{/home/"../assets/css/docs.theme.min.css">
 
 		<!-- Owl Stylesheets -->
-		<link rel="stylesheet" href="../assets/owlcarousel/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="../assets/owlcarousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" th:href="@{/home/"../assets/owlcarousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" th:href="@{/home/"../assets/owlcarousel/assets/owl.theme.default.min.css">
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -28,9 +28,9 @@
     <![endif]-->
 
 		<!-- Favicons -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-		<link rel="shortcut icon" href="../assets/ico/favicon.png">
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" th:href="@{/home/"../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="shortcut icon" th:href="@{/home/"../assets/ico/favicon.png">
+		<link rel="shortcut icon" th:href="@{/home/"favicon.ico">
 
 		<!-- Yeah i know js should not be in header. Its required for demos.-->
 
@@ -46,7 +46,7 @@
 				<div class="large-12 columns">
 					<div class="brand left">
 						<h3>
-							<a href="/OwlCarousel2/">owl.carousel.js</a>
+							<a th:href="@{/home/"/OwlCarousel2/">owl.carousel.js</a>
 						</h3>
 					</div>
 					<a id="toggle-nav" class="right">
@@ -54,13 +54,13 @@
 					</a>
 					<div class="nav-bar">
 						<ul class="clearfix">
-							<li> <a href="/OwlCarousel2/index.html">Home</a> </li>
-							<li> <a href="/OwlCarousel2/demos/demos.html">Demos</a> </li>
+							<li> <a th:href="@{/home/"/OwlCarousel2/index.html">Home</a> </li>
+							<li> <a th:href="@{/home/"/OwlCarousel2/demos/demos.html">Demos</a> </li>
 							<li class="active">
-								<a href="/OwlCarousel2/docs/started-welcome.html">Docs</a>
+								<a th:href="@{/home/"/OwlCarousel2/docs/started-welcome.html">Docs</a>
 							</li>
 							<li>
-								<a href="https://github.com/OwlCarousel2/OwlCarousel2/archive/2.3.4.zip">Download</a>
+								<a th:href="@{/home/"https://github.com/OwlCarousel2/OwlCarousel2/archive/2.3.4.zip">Download</a>
 								<span class="download"></span>
 							</li>
 						</ul>
@@ -82,28 +82,28 @@
 				<div class="small-12 medium-3 large-3 columns">
 					<ul class="side-nav">
 						<li class="side-nav-head">Getting Started</li>
-						<li> <a href="started-welcome.html">Welcome</a> </li>
-						<li> <a href="started-installation.html">Installation</a> </li>
-						<li> <a href="started-faq.html">FAQ</a> </li>
+						<li> <a th:href="@{/home/"started-welcome.html">Welcome</a> </li>
+						<li> <a th:href="@{/home/"started-installation.html">Installation</a> </li>
+						<li> <a th:href="@{/home/"started-faq.html">FAQ</a> </li>
 					</ul>
 					<ul class="side-nav">
 						<li class="side-nav-head">API</li>
-						<li> <a href="api-options.html">Options</a> </li>
-						<li> <a href="api-classes.html">Classes</a> </li>
-						<li> <a href="api-events.html">Events</a> </li>
+						<li> <a th:href="@{/home/"api-options.html">Options</a> </li>
+						<li> <a th:href="@{/home/"api-classes.html">Classes</a> </li>
+						<li> <a th:href="@{/home/"api-events.html">Events</a> </li>
 					</ul>
 					<ul class="side-nav">
 						<li class="side-nav-head">Development</li>
-						<li> <a href="dev-buildin-plugins.html">Built-in Plugins</a> </li>
-						<li> <a href="dev-plugin-api.html">Plugin API</a> </li>
-						<li> <a href="dev-styles.html">Sass Styles</a> </li>
-						<li> <a href="dev-external.html">External Libs</a> </li>
+						<li> <a th:href="@{/home/"dev-buildin-plugins.html">Built-in Plugins</a> </li>
+						<li> <a th:href="@{/home/"dev-plugin-api.html">Plugin API</a> </li>
+						<li> <a th:href="@{/home/"dev-styles.html">Sass Styles</a> </li>
+						<li> <a th:href="@{/home/"dev-external.html">External Libs</a> </li>
 					</ul>
 					<ul class="side-nav">
 						<li class="side-nav-head">Support</li>
-						<li> <a href="support-contributing.html">Contributing</a> </li>
-						<li> <a href="support-changelog.html">Changelog</a> </li>
-						<li> <a href="support-contact.html">Contact</a> </li>
+						<li> <a th:href="@{/home/"support-contributing.html">Contributing</a> </li>
+						<li> <a th:href="@{/home/"support-changelog.html">Changelog</a> </li>
+						<li> <a th:href="@{/home/"support-contact.html">Contact</a> </li>
 					</ul>
 				</div>
 				<div class="small-12 medium-9 large-9 columns">
@@ -369,7 +369,7 @@
 						<hr>
 						<h3 id="next-step">Next Step</h3>
 						<h4 id="-classes-api-classes-html-">
-							<a href="api-classes.html">Classes</a>
+							<a th:href="@{/home/"api-classes.html">Classes</a>
 						</h4>
 					</article>
 				</div>
@@ -381,8 +381,8 @@
 			<div class="row">
 				<div class="large-12 columns">
 					<h5>
-						<a href="/OwlCarousel2/docs/support-contact.html">David Deutsch</a>
-						<a id="custom-tweet-button" href="https://twitter.com/share?url=https://github.com/OwlCarousel2/OwlCarousel2&text=Owl Carousel - This is so awesome! " target="_blank"></a>
+						<a th:href="@{/home/"/OwlCarousel2/docs/support-contact.html">David Deutsch</a>
+						<a id="custom-tweet-button" th:href="@{/home/"https://twitter.com/share?url=https://github.com/OwlCarousel2/OwlCarousel2&text=Owl Carousel - This is so awesome! " target="_blank"></a>
 					</h5>
 				</div>
 			</div>

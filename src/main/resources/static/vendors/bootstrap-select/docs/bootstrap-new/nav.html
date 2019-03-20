@@ -12,7 +12,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			{%- block site_name %}
-			<a class="navbar-brand" href="{{ nav.homepage.url }}">{{ config.site_name }}</a>
+			<a class="navbar-brand" th:href="@{/home/"{{ nav.homepage.url }}">{{ config.site_name }}</a>
 			{%- endblock %}
 		</div>
 
@@ -25,18 +25,18 @@
 				{% for nav_item in nav %}
 				{% if nav_item.children %}
 				<li class="dropdown{% if nav_item.active %} active{% endif %}">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav_item.title }} <b class="caret"></b></a>
+					<a th:href="@{/home/"#" class="dropdown-toggle" data-toggle="dropdown">{{ nav_item.title }} <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						{% for nav_item in nav_item.children %}
 						<li {% if nav_item.active %}class="active" {% endif %}>
-							<a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+							<a th:href="@{/home/"{{ nav_item.url }}">{{ nav_item.title }}</a>
 						</li>
 						{% endfor %}
 					</ul>
 				</li>
 				{% else %}
 				<li {% if nav_item.active %}class="active" {% endif %}>
-					<a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+					<a th:href="@{/home/"{{ nav_item.url }}">{{ nav_item.title }}</a>
 				</li>
 				{% endif %}
 				{% endfor %}
@@ -49,12 +49,12 @@
 				{%- block next_prev %}
 				{%- if page and (page.next_page or page.previous_page) %}
 				<li {% if not page.previous_page %}class="disabled" {% endif %}>
-					<a rel="next" {% if page.previous_page %}href="{{ page.previous_page.url }}" {% endif %}>
+					<a rel="next" {% if page.previous_page %}th:href="@{/home/"{{ page.previous_page.url }}" {% endif %}>
 						<i class="fa fa-arrow-left"></i> Previous
 					</a>
 				</li>
 				<li {% if not page.next_page %}class="disabled" {% endif %}>
-					<a rel="prev" {% if page.next_page %}href="{{ page.next_page.url }}" {% endif %}>
+					<a rel="prev" {% if page.next_page %}th:href="@{/home/"{{ page.next_page.url }}" {% endif %}>
 						Next <i class="fa fa-arrow-right"></i>
 					</a>
 				</li>
@@ -63,7 +63,7 @@
 				{%- block repo %}
 				{% if config.repo_url %}
 				<li>
-					<a href="{{ config.repo_url }}">
+					<a th:href="@{/home/"{{ config.repo_url }}">
 						{% if config.repo_name == 'GitHub' %}
 						<i class="fa fa-github"></i>
 						{% elif config.repo_name == 'Bitbucket' %}

@@ -1,0 +1,69 @@
+
+a.link{
+	text-decoration: none;
+}
+
+a.link:hover{
+	background: transparent;
+	color: #fa9e1c;
+}
+
+a.learn-more{
+	background: transparent;
+	color: #fa9e1c;
+	text-decoration: none;
+}
+
+a.learn-more:hover{
+	background: transparent;
+	color: #fa9e1c;
+}
+
+div.load-more{
+	background: rgba(54, 19, 84, 0.2);
+}
+
+.modal-overlay{
+	width: 100%;
+	height: 100%;
+	left:0;
+	top:1px;
+	overflow:hidden;
+	background: rgba(0, 0, 0, .7) !important;
+	text-align: center;
+	color: #fa9e1c;
+	display:none;
+	position: fixed;
+	padding-top: 30px;
+	z-index: 99999999999;
+}
+
+.modal-active{
+	display:block;
+}
+
+#noty_topRight_layout_container{
+	z-index:9999999999999999999999999999999999999 !important;
+}
+
+.modal-bottom-div{
+	text-align: center;
+	padding-bottom: 2px;
+}
+
+#modal-icon{
+	left: 58.8vw;
+	color:white;
+	top: 8vh;
+	background: linear-gradient(to right, rgb(101, 75, 202), rgb(242, 154, 26), rgb(101, 75, 202));
+	z-index: 999;
+	margin-right: 20px;
+	padding: 5px 8px 5px 8px;
+	border-radius: 100px;
+	position: fixed;
+	cursor: pointer;
+}
+
+#modal-icon:hover{
+	background: linear-gradient(to right, rgb(242, 154, 26), rgb(101, 75, 202), rgb(242, 154, 26));
+}

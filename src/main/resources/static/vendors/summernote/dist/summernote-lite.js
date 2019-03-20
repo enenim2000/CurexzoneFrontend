@@ -290,7 +290,7 @@ var dropdown = renderer.create('<div class="note-dropdown-menu" role="list">', f
     var markup = $.isArray(options.items) ? options.items.map(function (item) {
         var value = (typeof item === 'string') ? item : (item.value || '');
         var content = options.template ? options.template(item) : item;
-        var $temp = $('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + item + '"></a>');
+        var $temp = $('<a class="note-dropdown-item" th:href="@{/home/"#" data-value="' + value + '" role="listitem" aria-label="' + item + '"></a>');
         $temp.html(content).data('item', item);
         return $temp;
     }) : options.items;
@@ -311,7 +311,7 @@ var dropdownCheck = renderer.create('<div class="note-dropdown-menu note-check" 
     var markup = $.isArray(options.items) ? options.items.map(function (item) {
         var value = (typeof item === 'string') ? item : (item.value || '');
         var content = options.template ? options.template(item) : item;
-        var $temp = $('<a class="note-dropdown-item" href="#" data-value="' + value + '" role="listitem" aria-label="' + item + '"></a>');
+        var $temp = $('<a class="note-dropdown-item" th:href="@{/home/"#" data-value="' + value + '" role="listitem" aria-label="' + item + '"></a>');
         $temp.html([icon(options.checkClassName), ' ', content]).data('item', item);
         return $temp;
     }) : options.items;
@@ -612,7 +612,7 @@ var videoDialog = function (opt) {
         '<input class="note-video-url note-input" type="text" />' +
         '</div>';
     var footer = [
-        '<button type="button" href="#" class="note-btn note-btn-primary note-video-btn disabled" disabled>',
+        '<button type="button" th:href="@{/home/"#" class="note-btn note-btn-primary note-video-btn disabled" disabled>',
         opt.lang.video.insert,
         '</button>'
     ].join('');
@@ -634,7 +634,7 @@ var imageDialog = function (opt) {
         '<input class="note-image-url note-input" type="text" />' +
         '</div>';
     var footer = [
-        '<button href="#" type="button" class="note-btn note-btn-primary note-btn-large note-image-btn disabled" disabled>',
+        '<button th:href="@{/home/"#" type="button" class="note-btn note-btn-primary note-btn-large note-image-btn disabled" disabled>',
         opt.lang.image.insert,
         '</button>'
     ].join('');
@@ -659,7 +659,7 @@ var linkDialog = function (opt) {
                 '<label>' + '<input type="checkbox" checked> ' + opt.lang.link.openInNewWindow + '</label>' +
                 '</div>' : '');
     var footer = [
-        '<button href="#" type="button" class="note-btn note-btn-primary note-link-btn disabled" disabled>',
+        '<button th:href="@{/home/"#" type="button" class="note-btn note-btn-primary note-link-btn disabled" disabled>',
         opt.lang.link.insert,
         '</button>'
     ].join('');
@@ -6435,7 +6435,7 @@ var LinkDialog = /** @class */ (function () {
                 : ''
         ].join('');
         var buttonClass = 'btn btn-primary note-btn note-btn-primary note-link-btn';
-        var footer = "<button type=\"submit\" href=\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.link.insert + "</button>";
+        var footer = "<button type=\"submit\" th:href="@{/home/\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.link.insert + "</button>";
         this.$dialog = this.ui.dialog({
             className: 'link-dialog',
             title: this.lang.link.insert,
@@ -6643,7 +6643,7 @@ var ImageDialog = /** @class */ (function () {
             '</div>'
         ].join('');
         var buttonClass = 'btn btn-primary note-btn note-btn-primary note-image-btn';
-        var footer = "<button type=\"submit\" href=\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.image.insert + "</button>";
+        var footer = "<button type=\"submit\" th:href="@{/home/\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.image.insert + "</button>";
         this.$dialog = this.ui.dialog({
             title: this.lang.image.insert,
             fade: this.options.dialogsFade,
@@ -6853,7 +6853,7 @@ var VideoDialog = /** @class */ (function () {
             '</div>'
         ].join('');
         var buttonClass = 'btn btn-primary note-btn note-btn-primary note-video-btn';
-        var footer = "<button type=\"submit\" href=\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.video.insert + "</button>";
+        var footer = "<button type=\"submit\" th:href="@{/home/\"#\" class=\"" + buttonClass + "\" disabled>" + this.lang.video.insert + "</button>";
         this.$dialog = this.ui.dialog({
             title: this.lang.video.insert,
             fade: this.options.dialogsFade,
@@ -7028,9 +7028,9 @@ var HelpDialog = /** @class */ (function () {
         var $container = this.options.dialogsInBody ? this.$body : this.$editor;
         var body = [
             '<p class="text-center">',
-            '<a href="http://summernote.org/" target="_blank">Summernote 0.8.10</a> · ',
-            '<a href="https://github.com/summernote/summernote" target="_blank">Project</a> · ',
-            '<a href="https://github.com/summernote/summernote/issues" target="_blank">Issues</a>',
+            '<a th:href="@{/home/"http://summernote.org/" target="_blank">Summernote 0.8.10</a> · ',
+            '<a th:href="@{/home/"https://github.com/summernote/summernote" target="_blank">Project</a> · ',
+            '<a th:href="@{/home/"https://github.com/summernote/summernote/issues" target="_blank">Issues</a>',
             '</p>'
         ].join('');
         this.$dialog = this.ui.dialog({

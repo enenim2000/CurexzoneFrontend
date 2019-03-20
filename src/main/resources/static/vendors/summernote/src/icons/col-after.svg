@@ -30,7 +30,7 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4209"
+       xlink:th:href="@{/home/"#linearGradient4209"
        id="linearGradient3671"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.0633074,0,0,0.0633074,2746.9779,180.3852)"

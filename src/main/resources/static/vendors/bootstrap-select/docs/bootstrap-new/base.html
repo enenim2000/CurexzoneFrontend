@@ -10,19 +10,19 @@
 		{% if config.site_author %}
 		<meta name="author" content="{{ config.site_author }}">{% endif %}
 		{% if page.canonical_url %}
-		<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
-		<link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
+		<link rel="canonical" th:href="@{/home/"{{ page.canonical_url }}">{% endif %}
+		<link rel="shortcut icon" th:href="@{/home/"{{ base_url }}/img/favicon.ico">
 		{%- endblock %}
 		{%- block htmltitle %}
 		<title>{% if page and page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
 		{%- endblock %}
 		{%- block styles %}
-		<link href="{{ base_url }}/css/bootstrap-3.3.7.min.css" rel="stylesheet">
-		<link href="{{ base_url }}/css/font-awesome-4.0.3.css" rel="stylesheet">
-		<link rel="stylesheet" href="{{ base_url }}/css/highlight.css">
-		<link href="{{ base_url }}/css/base.css" rel="stylesheet">
+		<link th:href="@{/home/"{{ base_url }}/css/bootstrap-3.3.7.min.css" rel="stylesheet">
+		<link th:href="@{/home/"{{ base_url }}/css/font-awesome-4.0.3.css" rel="stylesheet">
+		<link rel="stylesheet" th:href="@{/home/"{{ base_url }}/css/highlight.css">
+		<link th:href="@{/home/"{{ base_url }}/css/base.css" rel="stylesheet">
 		{%- for path in extra_css %}
-		<link href="{{ path }}" rel="stylesheet">
+		<link th:href="@{/home/"{{ path }}" rel="stylesheet">
 		{%- endfor %}
 		{%- endblock %}
 		{%- block libs %}
@@ -72,7 +72,7 @@
 			{% if config.copyright %}
 			<center>{{ config.copyright }}</center>
 			{% endif %}
-			<center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+			<center>Documentation built with <a th:href="@{/home/"http://www.mkdocs.org/">MkDocs</a>.</center>
 			{%- endblock %}
 		</footer>
 		{%- block scripts %}
